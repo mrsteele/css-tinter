@@ -1,0 +1,18 @@
+@prefix: "tint-";
+
+// FIXME: img tag doesn't support :before or :after
+img[class*="@{prefix}"] {
+    position: relative;
+    &::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+    &[class="@{prefix}red"]:before{
+        background-color: red;
+    }
+}
