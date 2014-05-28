@@ -1,9 +1,10 @@
 @prefix: "tint-";
+@locale: :after;
 
 // FIXME: img tag doesn't support :before or :after
-img[class*="@{prefix}"] {
+*[class*="@{prefix}"] {
     position: relative;
-    &::before {
+    &@{locale} {
         content: ' ';
         position: absolute;
         top: 0;
@@ -12,7 +13,23 @@ img[class*="@{prefix}"] {
         height: 100%;
         opacity: 0.5;
     }
-    &[class="@{prefix}red"]:before{
+    
+    // colors
+    &[class*="@{prefix}red"]@{locale}{
         background-color: red;
+    }
+    &[class*="@{prefix}green"]@{locale}{
+        background-color: green;
+    }
+    &[class*="@{prefix}blue"]@{locale}{
+        background-color: blue;
+    }
+    
+    // types
+    &[class*="@{prefix}less"]@{locale}{
+        opacity: 0.3;
+    }
+    &[class*="@{prefix}more"]@{locale}{
+        opacity: 0.7;
     }
 }

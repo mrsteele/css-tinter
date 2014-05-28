@@ -1,7 +1,7 @@
-img[class*="tint-"] {
+*[class*="tint-"] {
   position: relative;
 }
-img[class*="tint-"]::before {
+*[class*="tint-"]:after {
   content: ' ';
   position: absolute;
   top: 0;
@@ -10,6 +10,18 @@ img[class*="tint-"]::before {
   height: 100%;
   opacity: 0.5;
 }
-img[class*="tint-"][class="tint-red"]:before {
+*[class*="tint-"][class*="tint-red"]:after {
   background-color: red;
+}
+*[class*="tint-"][class*="tint-green"]:after {
+  background-color: green;
+}
+*[class*="tint-"][class*="tint-blue"]:after {
+  background-color: blue;
+}
+*[class*="tint-"][class*="tint-less"]:after {
+  opacity: 0.3;
+}
+*[class*="tint-"][class*="tint-more"]:after {
+  opacity: 0.7;
 }
