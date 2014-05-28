@@ -1,6 +1,21 @@
 @prefix: "tint-";
 @locale: :after;
 
+/**
+* Mixins
+*/
+.tint-color(@color){
+    &[class*="@{prefix}@{color}"]@{locale}{
+        background-color: ~"@{color}";
+    }
+}
+
+
+
+
+
+
+
 // FIXME: img tag doesn't support :before or :after
 *[class*="@{prefix}"] {
     position: relative;
@@ -14,18 +29,34 @@
         opacity: 0.5;
     }
     
-    // colors
-    &[class*="@{prefix}red"]@{locale}{
-        background-color: red;
-    }
-    &[class*="@{prefix}green"]@{locale}{
-        background-color: green;
-    }
-    &[class*="@{prefix}blue"]@{locale}{
-        background-color: blue;
-    }
+    /**
+    * Colors
+    */
+    .tint-color("aqua");
+    .tint-color("black");
+    .tint-color("blue");
+    .tint-color("fuchsia");
+    .tint-color("gray");
+    .tint-color("green");
+    .tint-color("lime");
+    .tint-color("maroon");
+    .tint-color("navy");
+    .tint-color("olive");
+    .tint-color("orange");
+    .tint-color("purple");
+    .tint-color("red");
+    .tint-color("silver");
+    .tint-color("teal");
+    .tint-color("white");
+    .tint-color("yellow");
     
-    // types
+    
+    
+    
+    
+    /**
+    * Types
+    */
     &[class*="@{prefix}less"]@{locale}{
         opacity: 0.3;
     }
