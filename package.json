@@ -1,12 +1,12 @@
 { 
-    "name": "int-img",
+    "name": "css-tinter",
     "version": "0.0.1",
-    "description": "Pure-CSS image tinter",
+    "description": "Pure-CSS tinter",
     "engine": [ "node >=0.2.0" ],
     "author": "Matt Steele <matt@omnionline.us>",
     "repository": {
         "type": "git",
-        "url": "http://github.com/mrsteele/tint-img"
+        "url": "http://github.com/mrsteele/css-tinter"
     },
-    "main": "src/tint-img"
+    "main": "src/css-tinter"
 }

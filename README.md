@@ -1,4 +1,4 @@
-tint-img
+css-tinter
 =========
 
-Pure-CSS image tinter
+Pure-CSS tinter

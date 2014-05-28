@@ -1,3 +1,3 @@
 #!/bin/bash
 
-lessc ../src/tint-img.less > ../src/tint-img.css
+lessc ../src/css-tinter.less > ../src/css-tinter.css
